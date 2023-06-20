@@ -1,23 +1,71 @@
+@font-face {
+	font-family: "Roboto";
+	src: url("./Roboto-Medium.ttf") format("ttf");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "OpenSans";
+	src: url("./OpenSans-SemiBold.ttf") format("ttf");
+	font-weight: 500;
+	font-style: normal;
+}
+
 .body {
 	margin: 0;
+	font-family: "Roboto";
 }
 
 .container {
-	height: 100vh;
-	width: 100vw;
 }
 
 .header,
 .footer {
 	background-color: black;
-	height: 5vh;
-	width: 100vw;
+	height: 7vh;
+	width: 100%;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: 1fr 4fr 1fr;
 }
 
 .main {
+	align-items: center;
 	background-image: url("/img/splash.jpg");
 	background-position: center;
 	background-size: cover;
-	height: 90vh;
-	width: 100vw;
+	color: white;
+	display: flex;
+	font-family: "OpenSans";
+	font-size: 5rem;
+	text-shadow: 3px 0px 7px rgba(0, 0, 0, 0.8), -3px 0px 7px rgba(0, 0, 0, 0.8),
+		0px 4px 7px rgba(0, 0, 0, 0.8);
+	height: 86vh;
+	justify-content: center;
+	width: 100%;
+}
+
+.github {
+	height: 100%;
+}
+
+.githubLinks {
+	align-items: center;
+	color: white;
+	display: flex;
+	font-size: 1.5rem;
+	gap: 30px;
+	height: 100%;
+	justify-content: center;
+}
+
+.githubIcon {
+	height: 2rem;
+}
+
+.header a:hover {
+	color: orange;
 }

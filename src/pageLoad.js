@@ -1,4 +1,6 @@
+import "./reset.css";
 import "./styles.css";
+import githubSVG from "./github.png";
 
 function pageLoad() {
 	console.log("pageLoad is called from pageLoad.js");
@@ -6,22 +8,50 @@ function pageLoad() {
 	document.body.classList.add("body");
 	const content = document.getElementById("content");
 
-	const container = document.createElement("div");
-	container.classList.add("container");
+	const createDiv = (className) => {
+		const div = document.createElement("div");
+		div.classList.add(className);
+		return div;
+	};
 
-	const header = document.createElement("div");
-	header.classList.add("header");
+	// Header
+	const header = createDiv("header");
+	const branding = createDiv("branding");
+	const tabs = createDiv("tabs");
 
-	const main = document.createElement("div");
-	main.classList.add("main");
+	// Github
+	const github = createDiv("github");
 
-	const footer = document.createElement("div");
-	footer.classList.add("footer");
+	const githubLink = document.createElement("a");
+	githubLink.classList.add("githubLinks");
+	githubLink.href = "https://github.com/AttackSwan/";
+	githubLink.target = "_blank";
 
-	container.appendChild(header);
-	container.appendChild(main);
-	container.appendChild(footer);
-	content.appendChild(container);
+	const githubIcon = new Image();
+	githubIcon.src = githubSVG;
+	githubIcon.alt = "Github profile icon";
+	githubIcon.classList.add("githubIcon");
+	githubLink.appendChild(githubIcon);
+
+	const githubUsername = document.createElement("p");
+	githubUsername.textContent = "AttackSwan";
+	githubLink.appendChild(githubUsername);
+
+	github.appendChild(githubLink);
+	header.append(branding, tabs, github);
+
+	// Splash
+	const main = createDiv("main");
+	main.textContent = "El Rincón Mexicano";
+
+	// Footer
+	const footer = createDiv("footer");
+	const insta = createDiv("insta");
+	const facebook = createDiv("facebook");
+	const tiktok = createDiv("tiktok");
+	footer.append(insta, facebook, tiktok);
+
+	content.append(header, main, footer);
 }
 
 export default pageLoad;
