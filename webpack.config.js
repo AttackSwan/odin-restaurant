@@ -7,6 +7,7 @@ module.exports = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: "El Rincón Mexicano",
+			template: "./src/index.html",
 		}),
 	],
 	output: {

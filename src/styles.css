@@ -1,23 +1,23 @@
 @font-face {
 	font-family: "Roboto";
-	src: url("./Roboto-Medium.ttf") format("ttf");
+	src: url("./fonts/Roboto-Medium.ttf") format("ttf");
 	font-weight: 500;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "OpenSans";
-	src: url("./OpenSans-SemiBold.ttf") format("ttf");
+	src: url("./fonts/OpenSans-SemiBold.ttf") format("ttf");
 	font-weight: 500;
 	font-style: normal;
 }
 
 .body {
 	margin: 0;
-	font-family: "Roboto";
 }
 
 .container {
+	font-family: "Roboto";
 }
 
 .header,
@@ -29,12 +29,52 @@
 
 .header {
 	display: grid;
-	grid-template-columns: 1fr 4fr 1fr;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.branding {
+	align-items: center;
+	display: flex;
+	padding-left: 30px;
+}
+
+.branding img {
+	height: 35px;
+}
+
+.github {
+	height: 100%;
+	grid-area: 1 / 5 / 2 / 6;
+}
+
+.githubLinks {
+	align-items: center;
+	color: white;
+	display: flex;
+	font-size: 1.5rem;
+	gap: 30px;
+	height: 100%;
+	justify-content: end;
+	padding-right: 30px;
+}
+
+.github img {
+	height: 2rem;
+}
+
+.github a:hover {
+	color: orange;
+}
+
+.tabs {
+	display: grid;
+	grid-area: 1 / 3 / 2 / 4;
+	grid-template-columns: repeat(3, 1fr);
 }
 
 .main {
 	align-items: center;
-	background-image: url("/img/splash.jpg");
+	background-image: url("./images/splash.jpg");
 	background-position: center;
 	background-size: cover;
 	color: white;
@@ -48,24 +88,69 @@
 	width: 100%;
 }
 
-.github {
-	height: 100%;
+.filter-white {
+	filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(185deg)
+		brightness(107%) contrast(101%);
+}
+.filter-orange {
+	filter: invert(47%) sepia(30%) saturate(3716%) hue-rotate(359deg)
+		brightness(101%) contrast(109%);
 }
 
-.githubLinks {
-	align-items: center;
+.tabButton {
+	background: none;
+	border-style: none;
+	box-sizing: border-box;
+	color: grey;
+	cursor: pointer;
+	display: inline-block;
+	font-family: "Roboto";
+	font-size: 1.3rem;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	line-height: 1.3;
+	padding: 0.875rem 1.125rem;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transform: translateZ(0) scale(1);
+	transition: transform 0.2s;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+}
+
+.tabButton:not(:disabled):hover {
+	transform: scale(1.05);
 	color: white;
-	display: flex;
-	font-size: 1.5rem;
-	gap: 30px;
-	height: 100%;
-	justify-content: center;
 }
 
-.githubIcon {
-	height: 2rem;
+.tabButton:not(:disabled):hover:active {
+	transform: scale(1.05) translateY(0.125rem);
 }
 
-.header a:hover {
-	color: orange;
+.tabButton:focus {
+	outline: 0 solid transparent;
+}
+
+.tabButton:focus:before {
+	content: "";
+	left: calc(-1 * 0.375rem);
+	pointer-events: none;
+	position: absolute;
+	top: calc(-1 * 0.375rem);
+	transition: border-radius;
+	user-select: none;
+}
+
+.tabButton:focus:not(:focus-visible) {
+	outline: 0 solid transparent;
+}
+
+.tabButton:focus:not(:focus-visible):before {
+	border-width: 0;
+}
+
+.tabButton:not(:disabled):active {
+	transform: translateY(0.125rem);
 }
