@@ -1,12 +1,15 @@
 import facebookSVG from "./images/facebook.svg";
 import instaSVG from "./images/instagram.svg";
 import twitterSVG from "./images/twitter.svg";
+import createDiv from "./utility.js";
 
 function loadHeader() {
-	const TOPdiv = document.querySelector(".TOP");
-	const socialsDiv = document.querySelector(".socials");
+	const footerDiv = document.querySelector(".footer");
 
-	TOPdiv.textContent = "Created for the Odin Project Javascript course";
+	const TOP = createDiv("TOP");
+	TOP.textContent = "Created for the Odin Project Javascript course";
+	const socials = createDiv("socials");
+	footerDiv.append(TOP, socials);
 
 	function createSocialLink(svgLink, altText, linkAddress) {
 		const iconLink = document.createElement("a");
@@ -23,15 +26,15 @@ function loadHeader() {
 		return iconLink;
 	}
 
-	const socials = [
+	const socialLinks = [
 		[facebookSVG, "Facebook Icon", "https://facebook.com"],
 		[instaSVG, "Instagram Icon", "https://instagram.com"],
 		[twitterSVG, "Twitter Icon", "https://twitter.com"],
 	];
 
-	socials.forEach(([svgLink, altText, linkAddress]) => {
+	socialLinks.forEach(([svgLink, altText, linkAddress]) => {
 		const socialLink = createSocialLink(svgLink, altText, linkAddress);
-		socialsDiv.appendChild(socialLink);
+		socials.appendChild(socialLink);
 	});
 }
 
