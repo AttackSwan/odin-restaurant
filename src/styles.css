@@ -182,3 +182,30 @@
 .tabButton:not(:disabled):active {
 	transform: translateY(0.125rem);
 }
+
+.footer {
+	color: white;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.footer img {
+	height: 30px;
+}
+
+.TOP {
+	align-items: center;
+	display: flex;
+	font-size: 1rem;
+	grid-area: 1 / 2 / 2 / 3;
+	justify-content: center;
+}
+
+.socials {
+	align-items: center;
+	display: flex;
+	gap: 30px;
+	grid-area: 1 / 3 / 2 / 4;
+	justify-content: end;
+	padding-right: 30px;
+}

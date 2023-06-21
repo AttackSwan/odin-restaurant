@@ -3,6 +3,7 @@ import "./styles.css";
 
 import { loadBranding, loadTabs, loadGithub } from "./loadHeader.js";
 import loadSplash from "./loadSplash";
+import loadFooter from "./loadFooter";
 
 function pageLoad() {
 	const content = document.getElementById("content");
@@ -27,16 +28,15 @@ function pageLoad() {
 	// Footer
 	const footer = createDiv("footer");
 	const TOP = createDiv("TOP");
-	const insta = createDiv("insta");
-	const facebook = createDiv("facebook");
-	const tiktok = createDiv("tiktok");
-	footer.append(TOP, insta, facebook, tiktok);
+	const socials = createDiv("socials");
+	footer.append(TOP, socials);
 
 	content.append(header, main, footer);
 	loadSplash();
 	loadBranding();
 	loadTabs();
 	loadGithub();
+	loadFooter();
 }
 
 export default pageLoad;
