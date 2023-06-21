@@ -23,7 +23,7 @@ function loadTabs() {
 
 	const menu = createTabButton("Menu");
 	const contact = createTabButton("Contact");
-	const about = createTabButton("About Us");
+	const about = createTabButton("About");
 
 	tabs.append(menu, contact, about);
 }

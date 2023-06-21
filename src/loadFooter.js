@@ -8,25 +8,7 @@ function loadHeader() {
 
 	TOPdiv.textContent = "Created for the Odin Project Javascript course";
 
-	const facebook = socialCreator(
-		facebookSVG,
-		"Facebook Icon",
-		"https://facebook.com"
-	);
-
-	const insta = socialCreator(
-		instaSVG,
-		"Instagram Icon",
-		"https://instagram.com"
-	);
-
-	const twitter = socialCreator(
-		twitterSVG,
-		"Twitter Icon",
-		"https://twitter.com"
-	);
-
-	function socialCreator(svgLink, altText, linkAddress) {
+	function createSocialLink(svgLink, altText, linkAddress) {
 		const iconLink = document.createElement("a");
 		iconLink.href = linkAddress;
 		iconLink.target = "_blank";
@@ -41,7 +23,16 @@ function loadHeader() {
 		return iconLink;
 	}
 
-	socialsDiv.append(facebook, insta, twitter);
+	const socials = [
+		[facebookSVG, "Facebook Icon", "https://facebook.com"],
+		[instaSVG, "Instagram Icon", "https://instagram.com"],
+		[twitterSVG, "Twitter Icon", "https://twitter.com"],
+	];
+
+	socials.forEach(([svgLink, altText, linkAddress]) => {
+		const socialLink = createSocialLink(svgLink, altText, linkAddress);
+		socialsDiv.appendChild(socialLink);
+	});
 }
 
 export default loadHeader;

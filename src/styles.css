@@ -12,6 +12,10 @@
 	font-style: normal;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 .body {
 	margin: 0;
 }
@@ -56,6 +60,7 @@
 	height: 100%;
 	justify-content: end;
 	padding-right: 30px;
+	text-decoration: none;
 }
 
 .github img {
@@ -129,11 +134,11 @@
 	background: none;
 	border-style: none;
 	box-sizing: border-box;
-	color: grey;
+	/* color: white; */
 	cursor: pointer;
 	display: inline-block;
 	font-family: "Roboto";
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	font-weight: 700;
 	letter-spacing: -0.01em;
 	line-height: 1.3;
@@ -150,7 +155,7 @@
 
 .tabButton:not(:disabled):hover {
 	transform: scale(1.05);
-	color: white;
+	color: orange;
 }
 
 .tabButton:not(:disabled):hover:active {
@@ -181,6 +186,16 @@
 
 .tabButton:not(:disabled):active {
 	transform: translateY(0.125rem);
+}
+
+.tabs button:nth-child(1) {
+	color: green;
+}
+.tabs button:nth-child(2) {
+	color: white;
+}
+.tabs button:nth-child(3) {
+	color: red;
 }
 
 .footer {
