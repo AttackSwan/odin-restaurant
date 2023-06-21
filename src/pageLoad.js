@@ -1,14 +1,10 @@
 import "./reset.css";
 import "./styles.css";
 
-// import loadGithub from "./loadGithub.js";
-// import loadTabs from "./loadTabs.js";
 import { loadBranding, loadTabs, loadGithub } from "./loadHeader.js";
+import loadSplash from "./loadSplash";
 
 function pageLoad() {
-	console.log("pageLoad is called from pageLoad.js");
-
-	document.body.classList.add("body");
 	const content = document.getElementById("content");
 
 	const createDiv = (className) => {
@@ -22,12 +18,11 @@ function pageLoad() {
 	const branding = createDiv("branding");
 	const tabs = createDiv("tabs");
 	const github = createDiv("github");
-
 	header.append(branding, tabs, github);
 
 	// Splash
 	const main = createDiv("main");
-	main.textContent = "El Rincón Mexicano";
+	// main.textContent = "El Rincón Mexicano";
 
 	// Footer
 	const footer = createDiv("footer");
@@ -38,6 +33,7 @@ function pageLoad() {
 	footer.append(TOP, insta, facebook, tiktok);
 
 	content.append(header, main, footer);
+	loadSplash();
 	loadBranding();
 	loadTabs();
 	loadGithub();

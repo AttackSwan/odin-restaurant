@@ -1,5 +1,5 @@
 import githubSVG from "./images/github.svg";
-import brandSVG from "./images/sombrero.svg";
+import brandSVG from "./images/hat.svg";
 
 function loadBranding() {
 	const branding = document.querySelector(".branding");
@@ -7,7 +7,6 @@ function loadBranding() {
 	const brandingIcon = new Image();
 	brandingIcon.src = brandSVG;
 	brandingIcon.alt = "Sombrero Icon";
-	brandingIcon.classList.add("filter-white");
 
 	branding.appendChild(brandingIcon);
 }
