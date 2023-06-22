@@ -26,8 +26,8 @@ function switchTab(e) {
 		case "Menu":
 			loadMenu();
 			break;
-		case "Contract":
-			loadContract();
+		case "Contact":
+			loadContact();
 			break;
 		case "About":
 			loadAbout();

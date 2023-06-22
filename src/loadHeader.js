@@ -48,7 +48,6 @@ function loadHeader() {
 		const githubIcon = new Image();
 		githubIcon.src = githubSVG;
 		githubIcon.alt = "Github profile icon";
-		githubIcon.classList.add("filter-white");
 
 		const githubUsername = document.createElement("p");
 		githubUsername.textContent = "AttackSwan";

@@ -4,8 +4,10 @@ import "./styles.css";
 import loadHeader from "./loadHeader.js";
 import loadSplash from "./loadSplash";
 import loadFooter from "./loadFooter";
+
 import createDiv from "./utility.js";
 import loadAbout from "./loadAbout";
+import loadContact from "./loadContact";
 
 function pageLoad() {
 	const content = document.getElementById("content");
@@ -18,7 +20,7 @@ function pageLoad() {
 
 	loadHeader();
 	// loadSplash();
-	loadAbout();
+	loadContact();
 	loadFooter();
 }
 

@@ -19,7 +19,6 @@ function loadHeader() {
 		const iconImage = new Image();
 		iconImage.src = svgLink;
 		iconImage.alt = altText;
-		iconImage.classList.add("filter-white");
 
 		iconLink.appendChild(iconImage);
 
