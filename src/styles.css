@@ -123,7 +123,7 @@
 }
 /* .filter-orange {
 	filter: invert(47%) sepia(30%) saturate(3716%) hue-rotate(359deg)
-		brightness(101%) contrast(109%);
+	brightness(101%) contrast(109%);
 } */
 
 .filter-shadow {
@@ -134,7 +134,6 @@
 	background: none;
 	border-style: none;
 	box-sizing: border-box;
-	/* color: white; */
 	cursor: pointer;
 	display: inline-block;
 	font-family: "Roboto";
@@ -196,6 +195,13 @@
 }
 .tabs button:nth-child(3) {
 	color: red;
+}
+
+.tabButton > img {
+	width: 20px;
+	position: absolute;
+	top: 5px;
+	left: 45%;
 }
 
 .footer {

@@ -13,9 +13,6 @@ function pageLoad() {
 	const main = createDiv("main");
 	const footer = createDiv("footer");
 
-	// const TOP = createDiv("TOP");
-	// const socials = createDiv("socials");
-	// footer.append(TOP, socials);
 	content.append(header, main, footer);
 
 	loadHeader();
