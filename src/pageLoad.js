@@ -4,10 +4,10 @@ import "./styles.css";
 import loadHeader from "./loadHeader.js";
 import loadSplash from "./loadSplash";
 import loadFooter from "./loadFooter";
-
-import createDiv from "./utility.js";
-import loadAbout from "./loadAbout";
+import loadMenu from "./loadMenu.js";
 import loadContact from "./loadContact";
+import loadAbout from "./loadAbout";
+import createDiv from "./utility.js";
 
 function pageLoad() {
 	const content = document.getElementById("content");
@@ -20,7 +20,7 @@ function pageLoad() {
 
 	loadHeader();
 	// loadSplash();
-	loadContact();
+	loadMenu();
 	loadFooter();
 }
 
