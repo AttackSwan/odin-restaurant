@@ -1,3 +1,11 @@
+:root {
+	--color-black: #000000;
+	--color-green: #008000;
+	--color-orange: #ffa500;
+	--color-red: #ff0000;
+	--color-white: #ffffff;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -12,7 +20,7 @@
 
 .header,
 .footer {
-	background-color: black;
+	background-color: var(--color-black);
 	height: 7vh;
 	width: 100%;
 }
@@ -39,7 +47,7 @@
 
 .githubLinks {
 	align-items: center;
-	color: white;
+	color: var(--color-white);
 	display: flex;
 	font-size: 1.5rem;
 	gap: 30px;
@@ -54,7 +62,7 @@
 }
 
 .github a:hover {
-	color: orange;
+	color: var(--color-orange);
 }
 
 .tabs {
@@ -68,7 +76,7 @@
 	background-image: url("./images/splash.jpg");
 	background-position: center;
 	background-size: cover;
-	color: white;
+	color: var(--color-white);
 	display: flex;
 	flex-direction: column;
 	font-family: "Open Sans", sans-serif;
@@ -78,17 +86,22 @@
 	text-shadow: 3px 0px 7px rgba(0, 0, 0, 0.8), -3px 0px 7px rgba(0, 0, 0, 0.8),
 		0px 4px 7px rgba(0, 0, 0, 0.8);
 	width: 100%;
-	/* overflow: visible; */
 }
 
 .blocking {
 	align-items: center;
-	background-color: rgba(114, 114, 114, 0.5);
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 15px;
+	border: 1px solid rgb(0, 0, 0);
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	color: var(--color-orange);
 	display: flex;
 	flex-direction: column;
-	padding: 16px;
+	font-family: "Kablammo", cursive;
+	font-size: 5rem;
+	gap: 16px;
+	margin: 64px 128px;
+	padding: 32px;
 	width: 100%;
 }
 
@@ -104,16 +117,17 @@
 	width: 150px;
 }
 
-/* .filter-orange {
-	filter: invert(47%) sepia(30%) saturate(3716%) hue-rotate(359deg)
-	brightness(101%) contrast(109%);
-} */
+.filter-orange {
+	filter: invert(76%) sepia(58%) saturate(4322%) hue-rotate(0deg)
+		brightness(103%) contrast(105%);
+}
 
 .filter-shadow {
 	filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 .tabButton {
+	-webkit-user-select: none;
 	background: none;
 	border-style: none;
 	box-sizing: border-box;
@@ -128,16 +142,15 @@
 	position: relative;
 	text-align: center;
 	text-decoration: none;
+	touch-action: manipulation;
 	transform: translateZ(0) scale(1);
 	transition: transform 0.2s;
 	user-select: none;
-	-webkit-user-select: none;
-	touch-action: manipulation;
 }
 
 .tabButton:not(:disabled):hover {
 	transform: scale(1.05);
-	color: orange;
+	color: var(--color-orange);
 }
 
 .tabButton:not(:disabled):hover:active {
@@ -171,24 +184,24 @@
 }
 
 .tabs button:nth-child(1) {
-	color: green;
+	color: var(--color-green);
 }
 .tabs button:nth-child(2) {
-	color: white;
+	color: var(--color-white);
 }
 .tabs button:nth-child(3) {
-	color: red;
+	color: var(--color-red);
 }
 
 .tabButton > img {
-	width: 20px;
+	left: 45%;
 	position: absolute;
 	top: 5px;
-	left: 45%;
+	width: 20px;
 }
 
 .footer {
-	color: white;
+	color: var(--color-white);
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 }
@@ -231,8 +244,25 @@
 	width: 50vw;
 }
 
+.about {
+	font-family: "Roboto", sans-serif;
+}
+
 .about img {
 	width: 170px;
+	line-height: 1.5;
+}
+
+.about p:nth-child(2) {
+	color: var(--color-orange);
+	font-size: 2rem;
+	font-weight: 600;
+	font-family: "Roboto", sans-serif;
+}
+
+.about p {
+	margin-top: 8px;
+	margin-bottom: 8px;
 }
 
 .phone,
@@ -285,7 +315,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: green;
+	color: var(--color-green);
 	font-size: 2rem;
 }
 .menuItem div:last-child {

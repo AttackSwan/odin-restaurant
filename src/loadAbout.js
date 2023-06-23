@@ -15,16 +15,25 @@ function loadAbout() {
 	moImg.src = moSVG;
 	moImg.alt = "Image of a moustache";
 
-	const aboutText1 = document.createElement("p");
-	const aboutText2 = document.createElement("p");
+	const aboutText = document.createElement("p");
+	const hoursText = document.createElement("p");
+	const takeoutText = document.createElement("p");
+	const deliveryText = document.createElement("p");
 
-	aboutText1.textContent =
-		"At El Rincón Mexicano, we take pride in sourcing the finest ingredients to craft our diverse menu. From sizzling fajitas to mouthwatering enchiladas, each dish is prepared with meticulous attention to detail and infused with the bold and authentic flavors that Mexico is renowned for. Whether you're a fan of traditional favorites or eager to explore new taste sensations, our menu offers something for every palate.";
-
-	aboutText2.textContent =
+	aboutText.textContent =
 		"Step into our warm and inviting ambiance, adorned with colorful décor that reflects the spirit of Mexico. Immerse yourself in the lively atmosphere as our friendly staff takes care of your every need. Whether you're celebrating a special occasion, enjoying a casual lunch, or looking to unwind with friends over margaritas, El Rincón Mexicano is the perfect destination.";
+	hoursText.textContent = "OPEN: Tues-Sun - 12pm to 9pm";
+	takeoutText.textContent = "Takeout available";
+	deliveryText.textContent = "No third party delivery";
 
-	blocking.append(hatImg, aboutText1, aboutText2, moImg);
+	blocking.append(
+		hatImg,
+		hoursText,
+		aboutText,
+		takeoutText,
+		deliveryText,
+		moImg
+	);
 
 	main.appendChild(blocking);
 }

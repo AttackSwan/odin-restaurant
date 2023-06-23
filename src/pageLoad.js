@@ -19,8 +19,7 @@ function pageLoad() {
 	content.append(header, main, footer);
 
 	loadHeader();
-	// loadSplash();
-	loadMenu();
+	loadSplash();
 	loadFooter();
 }
 
